@@ -8,7 +8,7 @@ use serde_json::Value as JsonValue;
 type JsonObject = serde_json::Map<String, JsonValue>;
 
 use crate::{
-    io::{PathExt, WriteExt},
+    io::{copy_files, PathExt, WriteExt},
     to_prefixed_tag, to_tag,
 };
 
@@ -121,11 +121,7 @@ impl<'track> SlidesPackage<'track> {
             }
 
             for section in deck.sections.iter() {
-                section
-                    .images
-                    .iter()
-                    .filter_map(|path| path.file_name().map(|name| (path, name)))
-                    .try_for_each(|(path, name)| path.copy(slide_images_dir.join(name)))?;
+                copy_files(&section.images, &slide_images_dir)?;
             }
 
             let template_content = deck

@@ -235,6 +235,7 @@ pub struct Exercise {
     pub name: String,
     pub path: PathBuf,
     pub description: PathBuf,
+    pub description_images: Vec<PathBuf>,
     pub includes: Vec<String>,
 }
 
@@ -246,7 +247,12 @@ impl Indexed<Exercise> {
     ) -> Result<(), LoadTrackError> {
         let Indexed { data, .. } = self;
 
-        section.subsection(&data.name, &data.description, &data.path);
+        section.subsection(
+            &data.name,
+            &data.description,
+            &data.description_images,
+            &data.path,
+        );
 
         unit_exercises.package(&data.name, &data.path, &data.includes);
 

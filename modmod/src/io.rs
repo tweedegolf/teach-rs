@@ -106,3 +106,10 @@ impl<W: io::Write> WriteExt for W {
             .change_context(C::default())
     }
 }
+
+pub fn copy_files<P: AsRef<Path>, C: Context + Default>(files: &[P], dest: &Path) -> Result<(), C> {
+    files
+        .iter()
+        .filter_map(|path| path.as_ref().file_name().map(|name| (path, name)))
+        .try_for_each(|(path, name)| path.copy(dest.join(name)))
+}
