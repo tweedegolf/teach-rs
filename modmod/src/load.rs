@@ -167,18 +167,7 @@ impl PathTo<TopicDef> {
             .into_report()
             .change_context(HydrateTrackError)?;
 
-        let images = base_path.join("images");
-        let images = images
-            .is_dir()
-            .then_some(
-                images
-                    .get_dir_content()
-                    .map(|c| c.files.into_iter().map(PathBuf::from)),
-            )
-            .transpose()?
-            .into_iter()
-            .flatten()
-            .collect();
+        let images = dir_content(&base_path.join("images"))?;
 
         Ok(Topic {
             name,
@@ -191,6 +180,19 @@ impl PathTo<TopicDef> {
         }
         .with_index(topic_index))
     }
+}
+
+pub fn dir_content(path: &Path) -> Result<Vec<PathBuf>, HydrateTrackError> {
+    Ok(path
+        .is_dir()
+        .then_some(
+            path.get_dir_content()
+                .map(|c| c.files.into_iter().map(PathBuf::from)),
+        )
+        .transpose()?
+        .into_iter()
+        .flatten()
+        .collect())
 }
 
 #[derive(Debug, Deserialize)]
@@ -225,10 +227,12 @@ impl ExerciseDef {
             .canonicalize()
             .into_report()
             .change_context(HydrateTrackError)?;
+        let description_images = dir_content(&path.join("images"))?;
         Ok(Exercise {
             name,
             path,
             description,
+            description_images,
             includes,
         }
         .with_index(exercise_index))
