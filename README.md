@@ -4,11 +4,11 @@
 
 Teach-rs is a university course for computer science students, introducing the Rust Programming Language, and is available for anyone who wants to teach Rust.
 
-Why? Have a look at our [blog post](https://tweedegolf.nl/en/blog/80/rust-101-open-source-university-course) introducing the course.
+Why? Have a look at our [blog post](https://tweedegolf.nl/en/blog/127/want-more-rust-break-the-cycle) introducing the course.
 
 This repo will contain everything that's needed to organize the course: slides, exercises, tools, setup instructions and more.
 
-*While all the available material is user-ready, this repo is not yet as exhaustive as we'd like, so feedback and [contributions](./CONTRIBUTING.md) are welcome! So is sponsorship; read more below or on our [Sponsorship page](https://github.com/sponsors/tweedegolf).*
+*While all the available material is user-ready, this repo is not yet as exhaustive as we'd like, so feedback and [contributions](./CONTRIBUTING.md) are welcome! So is sponsorship; read more below or on our [Sponsorship page](https://github.com/sponsors/trifectatechfoundation).*
 
 ## Usage
 The teacher's guide can be found [here](./teachers_guide.md).
@@ -45,18 +45,12 @@ Use one of the pre-defined tracks, or compose your own with the content we provi
 5. Provide several specialized learning tracks that focus on different applications (e.g. systems, embedded, web)
 6. Enable teachers to contribute their material for others to use
 
-## About the project
-
-The project is executed by Henk Oordt and others at [Tweede golf](https://tweedegolf.nl). It is a not-for-profit project, where the only requirement is that the cost of our work is covered.
-
-We're very happy with support in developing the course material from:
-
-- Bernard van Gastel, Radboud University
-- Florian Gilcher, Ferrous Systems
-- Jonathan Donszelmann, TU Delft
-
 ## Contributing
 If you'd like to improve teach-rs, either by doing touchups, restructuring a module, or even adding a module, please refer to the [contributing guidelines](./CONTRIBUTING.md) before you get started.
+
+## About the project
+
+The project was created by [Tweede golf](https://tweedegolf.nl), and has since moved to the [Trifecta Tech Foundation](https://trifectatech.org).
 
 ### Our sponsors
 
@@ -71,9 +65,9 @@ If you'd like to improve teach-rs, either by doing touchups, restructuring a mod
 <img style="margin: 1rem 5% 1rem 5%;" src="./assets/Rust_Foundation_logo_100_color.png" alt="Logo RF"  width="200px" />
 
 
-The initial sponsor of the project is the Faculty of Informatics and Information Technologies (FIIT) of the Slovak University of Technology (STU) in Bratislava, Slovakia. [FIIT](https://www.fiit.stuba.sk/en.html?page_id=749)'s contribution has enabled us to layout the groundwork for the course. [Tweede golf](https://tweedegolf.nl/en) and [Rust Edu](https://rust-edu.org/) have also contributed substantially to the creation of teach-rs.
+The project's initial sponsor is the Faculty of Informatics and Information Technologies (FIIT) of the Slovak University of Technology (STU) in Bratislava, Slovakia. [FIIT](https://www.fiit.stuba.sk/en.html?page_id=749)'s contribution has enabled us to lay the groundwork for the course. [Tweede golf](https://tweedegolf.nl/en) and [Rust Edu](https://rust-edu.org/) have also contributed substantially to the creation of teach-rs.
 
-In addition, lead developer Henk has received a grant from the [Rust Foundation](https://foundation.rust-lang.org/).
+In addition, one of our maintainers, [@henk](https://github.com/hdoordt), received a grant from the [Rust Foundation](https://foundation.rust-lang.org/).
 
 #### Silver sponsors
 
@@ -84,4 +78,5 @@ And a big thank you to our Silver sponsors:
 
 ### Support teach-rs
 
-We are in search of further funding for this project. Contact us if you´re interested, or [sponsor](https://github.com/sponsors/tweedegolf) our work. At the moment, any one-time or montly donation would support the maintenance of the project. Larger donations would enable us to create new modules and improve existing course material. 
+Contact us if you´re interested in financially supporting the maintenance and further development of the teach-rs resources. See [trifectatech.org/support](https://trifectatech.org/support/).
+You can also sponsor our work through [GitHub sponsors](https://github.com/sponsors/trifectatechfoundation).
